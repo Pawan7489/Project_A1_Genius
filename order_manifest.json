@@ -1,0 +1,15 @@
+{
+  "business_unit": "A1 Printing Solutions",
+  "currency": "INR",
+  "total_revenue": 45000,
+  "active_orders": [
+    {
+      "order_id": "ORD-786",
+      "client": "John Doe",
+      "type": "3D_POSTER",
+      "status": "COMPLETED",
+      "timestamp": "2026-02-15"
+    }
+  ],
+  "inventory_alert": "PAPER_LOW"
+}
