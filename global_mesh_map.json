@@ -1,0 +1,12 @@
+{
+  "registry_v": "1.5.0-GLOBAL",
+  "active_nodes": [
+    {"id": "NODE_01", "name": "Local_Brain", "region": "Bhopal, IN", "coords": [23.2599, 77.4126], "type": "LOCAL_PC"},
+    {"id": "NODE_02", "name": "Render_Cloud", "region": "Oregon, US", "coords": [44.0000, -120.5000], "type": "CLOUD_SERVER"},
+    {"id": "NODE_03", "name": "TG_Storage", "region": "Amsterdam, NL", "coords": [52.3676, 4.9041], "type": "INFINITE_DRIVE"}
+  ],
+  "latency_map": {
+    "IN_TO_US": "180ms",
+    "IN_TO_NL": "120ms"
+  }
+}
