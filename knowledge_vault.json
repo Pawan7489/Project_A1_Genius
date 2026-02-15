@@ -1,0 +1,14 @@
+{
+  "graph_v": "7.0.0-PLATINUM",
+  "nodes": [
+    {"id": "A1_CORE", "label": "Project A1", "type": "ROOT"},
+    {"id": "WP_HUB", "label": "WordPress Manager", "type": "MODULE"},
+    {"id": "CLOUD_MESH", "label": "Unlimited Storage", "type": "INFRA"}
+  ],
+  "edges": [
+    {"from": "A1_CORE", "to": "WP_HUB", "relation": "GOVERNS"},
+    {"from": "WP_HUB", "to": "CLOUD_MESH", "relation": "BACKUP_TO"}
+  ],
+  "relevance_score": 0.98,
+  "last_audit": "2026-02-15 21:28:00"
+}
