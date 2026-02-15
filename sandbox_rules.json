@@ -1,0 +1,12 @@
+{
+  "sandbox_version": "1.0.1",
+  "security_level": "STRICT",
+  "forbidden_commands": [
+    "rm -rf",
+    "os.system('format')",
+    "shutil.rmtree",
+    "os.environ.clear()",
+    "open('/etc/passwd')"
+  ],
+  "auto_shutdown_on_violation": true
+}
