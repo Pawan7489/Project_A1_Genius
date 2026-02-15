@@ -1,0 +1,11 @@
+{
+  "onion_v": "4.6.0-MASTER",
+  "layers": [
+    {"id": "L1_INTERFACE", "name": "Interface Layer", "status": "SECURE", "access": "ADMIN_ONLY"},
+    {"id": "L2_SECURITY", "name": "Security Layer", "status": "ACTIVE", "access": "ENCRYPTED"},
+    {"id": "L3_VALIDATION", "name": "Validation Layer", "status": "SCANNING", "access": "STRICT"},
+    {"id": "L4_CORE", "name": "Core Logic", "status": "LOCKED", "access": "READ_ONLY"}
+  ],
+  "threat_level": "LOW",
+  "kill_switch_armed": true
+}
