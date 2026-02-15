@@ -1,0 +1,15 @@
+{
+  "dev_nexus_v": "1.4.0-STABLE",
+  "active_editors": {
+    "JS_PANEL": {"theme": "A1-HACKER-DARK", "status": "READY"},
+    "JAVA_PANEL": {"theme": "A1-HACKER-DARK", "status": "READY"}
+  },
+  "auto_install_config": {
+    "vscode_installed": true,
+    "last_sync": "2026-02-15 20:30:00"
+  },
+  "saved_scripts": [
+    {"name": "D_DRIVE_SCANNER", "lang": "JS", "id": "SCR_001"},
+    {"name": "ENGINE_OPTIMIZER", "lang": "JAVA", "id": "SCR_002"}
+  ]
+}
