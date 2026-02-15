@@ -1,0 +1,13 @@
+{
+  "canvas_v": "5.0.0-NODE",
+  "active_nodes": [
+    {"id": "NODE_H1", "type": "HOSTING", "label": "Hostinger_Cloud", "pos": {"x": 100, "y": 200}},
+    {"id": "NODE_D1", "type": "DOMAIN", "label": "printing_hub.com", "pos": {"x": 400, "y": 200}},
+    {"id": "NODE_A1", "type": "AI_ENGINE", "label": "GEMINI_ULTRA", "pos": {"x": 250, "y": 400}}
+  ],
+  "links": [
+    {"from": "NODE_H1", "to": "NODE_D1", "status": "CONNECTED"},
+    {"from": "NODE_A1", "to": "NODE_D1", "status": "SYNCED"}
+  ],
+  "bridge_health": "OPTIMAL"
+}
