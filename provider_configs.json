@@ -1,0 +1,21 @@
+{
+  "active_brain": "OPENAI_GPT4",
+  "providers": {
+    "OPENAI_GPT4": {
+      "status": "ACTIVE",
+      "latency": "120ms",
+      "endpoint": "https://api.openai.com/v1"
+    },
+    "GEMINI_PRO": {
+      "status": "STANDBY",
+      "latency": "95ms",
+      "endpoint": "https://generativelanguage.googleapis.com"
+    },
+    "CLAUDE_3": {
+      "status": "STANDBY",
+      "latency": "150ms",
+      "endpoint": "https://api.anthropic.com"
+    }
+  },
+  "auto_failover": true
+}
