@@ -1,0 +1,13 @@
+{
+  "project_name": "Project A1 Super Genius AI",
+  "version": "1.0.0-CORE-75",
+  "foundation_date": "2026-02-11",
+  "core_laws": {
+    "L1": "Intent over Syntax - Hinglish Support Mandatory.",
+    "L5": "Kill Switch Protocol - Ctrl+Alt+K for Instant Freeze.",
+    "L13": "Onion Architecture - Ball-in-Ball Encapsulation.",
+    "L75": "The AI is strictly forbidden from editing its own foundational rules."
+  },
+  "admin_key": "ENCRYPTED_SHA256_ADMIN_ONLY",
+  "read_only_lock": true
+}
