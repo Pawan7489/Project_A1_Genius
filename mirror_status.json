@@ -1,0 +1,11 @@
+{
+  "mesh_id": "A1_GALAXY_MESH",
+  "sync_interval": "30s",
+  "nodes": {
+    "RENDER_CLOUD": {"status": "ACTIVE", "latency": "45ms", "load": "12%"},
+    "LOCAL_PC_D": {"status": "SYNCED", "path": "D:/", "health": "GREEN"},
+    "LOCAL_PC_E": {"status": "SYNCED", "path": "E:/", "health": "GREEN"}
+  },
+  "last_mirror_time": "2026-02-15 20:20:00",
+  "bridge_rule_compliance": "ACTIVE"
+}
