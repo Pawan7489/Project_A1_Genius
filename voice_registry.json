@@ -1,0 +1,9 @@
+{
+  "voice_id": "A1-GENIUS-V1",
+  "language_support": ["English", "Hindi", "Hinglish"],
+  "pitch": 1.0,
+  "speed": 1.1,
+  "auto_narration": true,
+  "active_provider": "HuggingFace_TTS",
+  "status": "READY"
+}
