@@ -1,0 +1,17 @@
+{
+  "sentinel_v": "5.2.0-ELITE",
+  "active_threats": [
+    {
+      "id": "THREAT_001",
+      "timestamp": "2026-02-15 21:15:00",
+      "origin": "China",
+      "type": "DDoS Simulation",
+      "status": "BLOCKED"
+    }
+  ],
+  "security_stats": {
+    "total_blocked": 1420,
+    "active_onion_layers": 4,
+    "kill_switch_status": "ARMED"
+  }
+}
