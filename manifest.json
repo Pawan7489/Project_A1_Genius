@@ -1,0 +1,21 @@
+{
+  "name": "Project A1 Super Genius AI",
+  "short_name": "A1 Genius",
+  "description": "Mobile Neural Command Center for Project A1",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#ff003c",
+  "icons": [
+    {
+      "src": "assets/img/a1_logo_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/a1_logo_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
