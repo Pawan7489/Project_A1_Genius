@@ -1,0 +1,27 @@
+{
+  "nexus_v": "3.2.0-ELITE",
+  "app_matrix": [
+    {
+      "name": "WHATSAPP",
+      "status": "CONNECTED",
+      "cloud_sync": "ENABLED",
+      "apk_version": "v2.24.1",
+      "last_sync": "2026-02-15 21:20:00"
+    },
+    {
+      "name": "FACEBOOK",
+      "status": "EMPTY_SLOT",
+      "cloud_sync": "DISABLED",
+      "apk_version": "NULL",
+      "last_sync": "NEVER"
+    },
+    {
+      "name": "INSTAGRAM",
+      "status": "GHOST_STUB",
+      "cloud_sync": "PENDING",
+      "apk_version": "v14.0.2",
+      "last_sync": "2026-02-15 21:18:00"
+    }
+  ],
+  "global_sync_rule": "DISTRIBUTED_MESH_ONLY"
+}
