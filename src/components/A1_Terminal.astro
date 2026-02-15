@@ -1,0 +1,31 @@
+---
+/* PROJECT A1: ASTRO TERMINAL COMPONENT */
+const { title = "A1_CORE_TERMINAL" } = Astro.props;
+---
+
+<div class="card bg-black border-success mb-4">
+    <div class="card-header d-flex justify-content-between">
+        <h3 class="card-title text-success font-monospace">
+            <i class="bi bi-cpu-fill"></i> {title}
+        </h3>
+        <div class="status-indicator">
+            <span class="badge bg-success blink">LIVE_LINK</span>
+        </div>
+    </div>
+    <div class="card-body terminal-window" id="a1-terminal-body" style="height: 400px; overflow-y: auto;">
+        <div class="output text-success small font-monospace">
+            [SYSTEM] Awaiting Commander Input...
+        </div>
+    </div>
+    <div class="card-footer p-0">
+        <div class="input-group">
+            <span class="input-group-text bg-dark border-0 text-success">A1:~$</span>
+            <input type="text" id="master-input" class="form-control bg-black text-white border-0" placeholder="Ek naya folder banao...">
+        </div>
+    </div>
+</div>
+
+<style>
+    .blink { animation: blinker 1s linear infinite; }
+    @keyframes blinker { 50% { opacity: 0; } }
+</style>
