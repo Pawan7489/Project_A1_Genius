@@ -1,0 +1,16 @@
+{
+  "launcher_v": "6.5.0-ELITE",
+  "icon_config": {
+    "style": "HOLOGRAPHIC_3D",
+    "glow_color": "#00F3FF",
+    "startup_sound": "assets/audio/a1_pulse.mp3"
+  },
+  "boot_protocols": {
+    "run_self_diagnosis": true,
+    "check_drive_connections": ["C:", "D:", "E:"],
+    "kill_switch_active": true
+  },
+  "skeleton_slots": {
+    "future_voice_api": "GHOST_STUB"
+  }
+}
