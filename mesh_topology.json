@@ -1,0 +1,11 @@
+{
+  "topology_version": "1.0.0",
+  "active_nodes": ["DRIVE_D", "DRIVE_E", "CLOUD_STAGING"],
+  "sync_priority": {
+    "DRIVE_D": "High (Logic Path)",
+    "DRIVE_E": "Medium (Storage Path)",
+    "CLOUD_STAGING": "High (Cloud Bridge)"
+  },
+  "last_full_mesh_sync": "2026-02-15 17:50:00",
+  "connection_protocol": "Distributed-Mesh-v2"
+}
