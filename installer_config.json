@@ -1,0 +1,10 @@
+{
+  "installer_version": "1.0.0-GOLD",
+  "app_name": "Project A1 Super Genius",
+  "icon_path": "./assets/img/a1_logo_gold.ico",
+  "dependencies": ["python", "flask", "telethon", "numpy", "requests"],
+  "auto_start": true,
+  "install_path": "C:/Program Files/A1_Genius",
+  "onion_security_check": "ENABLED",
+  "mesh_sync_on_boot": true
+}
