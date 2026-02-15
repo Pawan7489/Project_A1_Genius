@@ -1,0 +1,25 @@
+{
+  "hub_version": "1.0.0",
+  "slots": {
+    "IMAGE_GENERATOR": {
+      "path": "",
+      "api_url": "",
+      "status": "EMPTY"
+    },
+    "PDF_ANALYZER": {
+      "path": "./plugins/pdf_core.py",
+      "api_url": "local",
+      "status": "CONNECTED"
+    },
+    "LIVE_WEB_SEARCH": {
+      "path": "",
+      "api_url": "",
+      "status": "EMPTY"
+    },
+    "CRYPTO_TRACKER": {
+      "path": "",
+      "api_url": "",
+      "status": "EMPTY"
+    }
+  }
+}
