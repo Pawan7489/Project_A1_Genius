@@ -1,0 +1,79 @@
+/* PROJECT A1: CORE STYLESHEET
+   Template: AdminLTE 4 (Customized)
+   Theme: Super Genius Hacker Mode
+*/
+
+/* Core Colors Override */
+:root {
+  --bs-body-bg: #050505;
+  --bs-body-color: #00ff41; /* Matrix Green */
+  --lte-sidebar-bg: #000000;
+  --lte-accent-color: #00ff41;
+  --bs-primary: #008f11;
+  --bs-danger: #ff003c; /* Kill Switch Red */
+  --bs-border-color: #1a1a1a;
+}
+
+/* Futuristic Scanline Effect */
+body::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 118, 0.02));
+  z-index: 9999;
+  pointer-events: none;
+  background-size: 100% 3px, 2px 100%;
+}
+
+/* Sidebar Styling */
+.app-sidebar {
+  border-right: 1px solid #00ff41 !important;
+  box-shadow: 5px 0 15px rgba(0, 255, 65, 0.05);
+}
+
+.sidebar-brand {
+  border-bottom: 1px solid #1a1a1a;
+  background: #000 !important;
+  color: #fff !important;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Neon Glow for Cards */
+.card {
+  background: #0a0a0a !important;
+  border: 1px solid #1a1a1a !important;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #00ff41 !important;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+}
+
+/* Master Kill Switch UI */
+.btn-kill-protocol {
+  background: #200;
+  color: #ff003c;
+  border: 1px solid #ff003c;
+  text-transform: uppercase;
+  font-weight: 900;
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0 0 rgba(255, 0, 60, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 0, 60, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 0, 60, 0); }
+}
+
+/* Terminal Text Style */
+.terminal-output {
+  font-family: 'Courier New', monospace;
+  background: #000;
+  color: #00ff41;
+  padding: 10px;
+  border-left: 3px solid #00ff41;
+}
