@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A1 ACCESS | SYSTEM LOGIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./assets/css/adminlte.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+
+    <style>
+        /* LOGIN SPECIFIC HACKER THEME */
+        body {
+            background-color: #000;
+            color: #00ff41;
+            font-family: 'Courier New', monospace;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Matrix Grid Background */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: -1;
+        }
+
+        .login-box {
+            width: 400px;
+            background: rgba(10, 10, 10, 0.95);
+            border: 1px solid #333;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.15);
+            padding: 0;
+        }
+
+        .card-header {
+            background: #050505;
+            border-bottom: 1px solid #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .brand-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 4px;
+            text-decoration: none;
+        }
+        
+        .brand-text span { color: #dc3545; text-shadow: 0 0 10px #dc3545; }
+
+        .form-control {
+            background: #0f0f0f;
+            border: 1px solid #333;
+            color: #00ff41;
+            border-radius: 0;
+        }
+        
+        .form-control:focus {
+            background: #000;
+            border-color: #00ff41;
+            box-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+            color: #fff;
+        }
+
+        .btn-enter {
+            background: #004400;
+            color: #00ff41;
+            border: 1px solid #00ff41;
+            width: 100%;
+            padding: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .btn-enter:hover {
+            background: #00ff41;
+            color: #000;
+            box-shadow: 0 0 15px #00ff41;
+        }
+    </style>
+</head>
+<body class="login-page">
+
+    <div class="login-box card">
+        <div class="card-header">
+            <a href="#" class="brand-text"><span>A1</span> GENIUS</a>
+            <p class="mb-0 text-secondary" style="font-size: 0.8rem; letter-spacing: 1px;">SECURE GATEWAY</p>
+        </div>
+        
+        <div class="card-body p-4">
+            <p class="login-box-msg text-center text-secondary mb-4">IDENTIFY YOURSELF</p>
+
+            <form action="./index.html">
+                <div class="input-group mb-3">
+                    <span class="input-group-text bg-dark border-secondary text-secondary"><i class="bi bi-person-fill"></i></span>
+                    <input type="text" class="form-control" placeholder="COMMANDER ID" required>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text bg-dark border-secondary text-secondary"><i class="bi bi-shield-lock-fill"></i></span>
+                    <input type="password" class="form-control" placeholder="ACCESS KEY" required>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-enter">Initiate Link</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="mt-4 text-center" style="font-size: 11px; color: #444;">
+                ENCRYPTION: <span class="text-success">AES-256 ACTIVE</span> <br>
+                UNAUTHORIZED ACCESS IS PROHIBITED
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/adminlte.js"></script>
+</body>
+</html>
