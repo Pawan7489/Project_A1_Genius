@@ -8,6 +8,12 @@ from guardian_protocol import guardian
 
 def start_a1_system():
     print("--- PROJECT A1: INITIALIZING MASTER BOOT ---")
+
+
+# master_boot.py ke andar aisi line honi chahiye:
+from flask import Flask
+app = Flask(__name__) # Yeh 'app' variable hi gunicorn ko chahiye
+
     
     # 1. Self-Diagnosis (5-Second Rule)
     print("[1/4] Running 5-second Self-Diagnosis...")
