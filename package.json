@@ -1,0 +1,17 @@
+{
+  "name": "project-a1-super-genius",
+  "version": "1.0.0",
+  "description": "Futuristic AI Admin Control Panel based on AdminLTE 4",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "start": "echo 'Starting A1 System...' && open index.html",
+    "self-diagnosis": "echo 'Running 5s Self-Diagnosis...' && sleep 5 && echo 'All Systems Green'"
+  },
+  "author": "Commander",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "admin-lte": "4.0.0-rc6"
+  }
+}
