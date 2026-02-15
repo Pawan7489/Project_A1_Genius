@@ -1,0 +1,14 @@
+{
+  "nos_version": "1.0.0",
+  "command_mapping": {
+    "brightness": ["chamkan", "roshni", "ujala", "light"],
+    "volume": ["awaz", "shor", "sound", "volume"],
+    "system_info": ["halat", "stats", "hardware", "info"]
+  },
+  "safety_limits": {
+    "max_brightness": 100,
+    "max_volume": 80,
+    "critical_cpu_temp": 85
+  },
+  "zuckerberg_speed": "ENABLED"
+}
