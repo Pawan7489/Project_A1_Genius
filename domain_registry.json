@@ -1,0 +1,17 @@
+{
+  "webmaster_v": "1.0.4",
+  "providers": {
+    "GODADDY": {"api_key": "EMPTY_SLOT", "secret": "EMPTY_SLOT"},
+    "HOSTINGER": {"panel_url": "https://hpanel.hostinger.com", "api_token": "EMPTY_SLOT"},
+    "NAMECHEAP": {"username": "ADMIN_A1", "api_key": "EMPTY_SLOT"}
+  },
+  "domains": {
+    "your-printing-site.com": {
+      "provider": "GODADDY",
+      "hosting": "HOSTINGER_CLOUD",
+      "dns_status": "SYNCED",
+      "expiry": "2027-02-15"
+    }
+  },
+  "status": "READY_FOR_RESOLVE"
+}
