@@ -1,0 +1,8 @@
+{
+  "firewall_version": "4.0.1-STRICT",
+  "active_protection": "ONION_LAYER_4",
+  "blocked_ips": ["192.168.1.50"],
+  "authorized_regions": ["LOCAL_MESH", "SECURE_CLOUD"],
+  "auto_lockdown_threshold": 3,
+  "status": "SHIELD_ACTIVE"
+}
