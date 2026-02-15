@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A1 GENIUS | MASTER CORE</title>
+
+    <link rel="stylesheet" href="./assets/css/adminlte.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+</head>
+
+<body class="layout-fixed sidebar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    
+    <div class="app-wrapper">
+        
+        <nav class="app-header navbar navbar-expand bg-body border-bottom border-secondary">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
+                            <i class="bi bi-list"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="mx-auto d-none d-md-flex align-items-center gap-4">
+                    <div class="text-secondary small"><i class="bi bi-cpu text-success"></i> AI CORE: <span class="text-white fw-bold">ONLINE</span></div>
+                    <div class="text-secondary small"><i class="bi bi-shield-lock text-info"></i> CONSTITUTION: <span class="text-white fw-bold">ENFORCED</span></div>
+                    <div class="text-secondary small"><i class="bi bi-hdd-stack text-warning"></i> REGISTRY: <span class="text-white fw-bold">14 ACTIVE</span></div>
+                </div>
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <button class="btn btn-sm btn-kill-protocol" title="Ctrl+Alt+K for Emergency">
+                            <i class="bi bi-power"></i> KILL SWITCH
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <aside class="app-sidebar shadow">
+            <div class="sidebar-brand">
+                <a href="#" class="brand-link">
+                    <span class="brand-text fw-bold text-danger">A1</span> 
+                    <span class="fw-light">SUPER GENIUS</span>
+                </a>
+            </div>
+            
+            <div class="sidebar-wrapper">
+                <nav class="mt-2">
+                    <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu">
+                        <li class="nav-header text-secondary">MAIN TERMINAL</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon bi bi-speedometer2"></i>
+                                <p>Operational Overview</p>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-header text-secondary">AI MODULES</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon bi bi-diagram-3-fill text-success"></i>
+                                <p>Distributed Mesh</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon bi bi-journal-check text-info"></i>
+                                <p>Constitution Logs</p>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-header text-secondary">SYSTEM</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" onclick="runSelfDiagnosis()">
+                                <i class="nav-icon bi bi-activity text-warning"></i>
+                                <p>Self-Diagnosis</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="app-main">
+            <div class="app-content-header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <h3 class="mb-0">System Dashboard <span class="badge bg-success ms-2" style="font-size: 10px;">v1.0-GENIUS</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-content">
+                <div class="container-fluid">
+                    
+                    <div class="row">
+                        <div class="col-lg-3 col-6">
+                            <div class="card p-3 mb-4">
+                                <div class="text-secondary small">GPU TEMP</div>
+                                <div class="h4 mb-0 fw-bold">42°C</div>
+                                <div class="progress mt-2" style="height: 4px;">
+                                    <div class="progress-bar bg-success" style="width: 42%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="card p-3 mb-4">
+                                <div class="text-secondary small">NEURAL LOAD</div>
+                                <div class="h4 mb-0 fw-bold">12.5%</div>
+                                <div class="progress mt-2" style="height: 4px;">
+                                    <div class="progress-bar bg-info" style="width: 12%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header border-bottom border-secondary d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title text-success m-0"><i class="bi bi-terminal"></i> COMMAND INTERFACE</h5>
+                                    <div>
+                                        <span class="badge border border-success text-success">SECURE LINK</span>
+                                    </div>
+                                </div>
+                                <div class="card-body bg-black p-0" style="height: 350px;">
+                                    <div class="terminal-output p-3 h-100 overflow-auto">
+                                        </div>
+                                </div>
+                                <div class="card-footer bg-dark border-top border-secondary">
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-transparent border-0 text-success fw-bold">A1@Genius:~$</span>
+                                        <input type="text" class="form-control bg-transparent border-0 text-white" placeholder="Enter command (e.g., 'Ek naya folder banao')...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-12 text-center">
+                            <p class="text-secondary small mb-2">How is the AI performing?</p>
+                            <button class="btn btn-outline-success btn-sm me-2" onclick="submitFeedback('up')"><i class="bi bi-hand-thumbs-up"></i> Good Job</button>
+                            <button class="btn btn-outline-danger btn-sm" onclick="submitFeedback('down')"><i class="bi bi-hand-thumbs-down"></i> Bad</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/adminlte.js"></script>
+</body>
+</html>
