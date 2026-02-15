@@ -1,0 +1,13 @@
+{
+  "nexus_v": "7.4.0-STABLE",
+  "inbuilt_plugins": [
+    {"id": "D_SCANNER", "name": "Deep Drive Scanner", "status": "INSTALLED", "category": "SYSTEM"},
+    {"id": "WP_MUMMY", "name": "WordPress Orchestrator", "status": "GHOST_STUB", "category": "WEBMASTER"},
+    {"id": "AI_INJECTOR", "name": "Neural Web Injector", "status": "INSTALLED", "category": "AI"}
+  ],
+  "social_apks": [
+    {"id": "WA_GHOST", "name": "WhatsApp Automation", "status": "CONNECTED"},
+    {"id": "FB_SYNC", "name": "Facebook Mesh", "status": "EMPTY_SLOT"}
+  ],
+  "pichai_scale_ready": true
+}
