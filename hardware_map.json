@@ -1,0 +1,10 @@
+{
+  "hardware_registry": {
+    "MIC": {"id": "btn-mic", "safety_layer": 2, "voice_trigger": "mic"},
+    "SPEAKER": {"id": "btn-spk", "safety_layer": 2, "voice_trigger": "speaker"},
+    "KILL_SWITCH": {"id": "btn-kill", "safety_layer": 4, "voice_trigger": "freeze"},
+    "NETWORK": {"id": "btn-net", "safety_layer": 1, "voice_trigger": "network"}
+  },
+  "feedback_loops": "Enabled",
+  "zuckerberg_speed_protocol": "Active"
+}
