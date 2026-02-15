@@ -1,0 +1,28 @@
+{
+  "persona_v": "7.2.0-ULTIMATE",
+  "active_selection": "ADULT_NEUTRAL",
+  "personas": [
+    {
+      "id": "KID_A1",
+      "label": "Kid Persona",
+      "pitch": 1.2,
+      "speed": 1.1,
+      "tone": "Energetic"
+    },
+    {
+      "id": "ADULT_A1",
+      "label": "Adult Professional",
+      "pitch": 1.0,
+      "speed": 1.0,
+      "tone": "Balanced"
+    },
+    {
+      "id": "SENIOR_A1",
+      "label": "Senior Expert",
+      "pitch": 0.8,
+      "speed": 0.9,
+      "tone": "Authoritative"
+    }
+  ],
+  "api_slot": "EMPTY_SLOT"
+}
