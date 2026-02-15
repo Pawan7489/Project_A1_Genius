@@ -1,0 +1,13 @@
+{
+  "active_remote_tasks": [
+    {
+      "task_id": "T-101",
+      "type": "MODEL_TRAINING",
+      "platform": "Kaggle",
+      "progress": "45%",
+      "eta": "12 mins"
+    }
+  ],
+  "history": [],
+  "current_gpu_usage_cloud": "82%"
+}
