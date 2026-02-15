@@ -1,0 +1,11 @@
+{
+  "link_version": "2.0.1",
+  "voice_triggers": {
+    "system_report": "SEND_LOGS_TO_TG",
+    "backup_database": "SYNC_DB_TO_CLOUD",
+    "emergency_freeze": "FREEZE_AND_NOTIFY_TG"
+  },
+  "auto_reply_on_tg": true,
+  "encryption_level": "ONION_STRICT",
+  "zuckerberg_speed_protocol": "ENABLED"
+}
