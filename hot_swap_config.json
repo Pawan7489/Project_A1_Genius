@@ -1,0 +1,13 @@
+{
+  "registry_v": "3.1.0-ELITE",
+  "engine_slots": [
+    {"name": "GEMINI_ULTRA", "type": "API_KEY", "status": "CONNECTED", "target": "sk-a1-gemini-v2"},
+    {"name": "LOCAL_LLAMA_3", "type": "URL", "status": "CONNECTED", "target": "localhost:11434"},
+    {"name": "VOICE_STUB", "type": "GHOST_STUB", "status": "EMPTY_SLOT", "target": ""},
+    {"name": "D_DRIVE_CORE", "type": "FILE_PATH", "status": "CONNECTED", "target": "D:/Project_A1/Brain"}
+  ],
+  "hot_swap_rules": {
+    "auto_detect": true,
+    "fallback_to_ghost": true
+  }
+}
