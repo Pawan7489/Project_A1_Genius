@@ -1,0 +1,19 @@
+{
+  "system_id": "A1-GENIUS-RECOVERY",
+  "backups": {
+    "onion_gate.py": {
+      "primary": "./onion_gate.py",
+      "backup": "D:/A1_Backups/onion_gate.py"
+    },
+    "constitution.json": {
+      "primary": "./constitution.json",
+      "backup": "E:/Secure_Storage/constitution_v1.json"
+    },
+    "voice_engine.py": {
+      "primary": "./voice_engine.py",
+      "backup": "CLOUD_NODE/voice_engine.py"
+    }
+  },
+  "auto_repair_enabled": true,
+  "last_integrity_check": "2026-02-15 19:30:00"
+}
