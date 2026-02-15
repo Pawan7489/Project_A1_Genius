@@ -1,0 +1,8 @@
+flask
+telethon
+numpy
+requests
+psutil
+beautifulsoup4
+gunicorn
+# Hardware libs removed for Cloud Build stability
