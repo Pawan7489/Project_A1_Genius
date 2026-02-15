@@ -1,0 +1,25 @@
+{
+  "admin_vault_v": "2.0.1-MASTER",
+  "managed_websites": [
+    {
+      "id": "SITE_001",
+      "domain": "printing_hub.com",
+      "hosting": "Hostinger_Cloud",
+      "ai_status": "INJECTED",
+      "linked_engine": "GEMINI_PRO",
+      "health": "STABLE"
+    },
+    {
+      "id": "SITE_002",
+      "domain": "ai_services.net",
+      "hosting": "GoDaddy_VPS",
+      "ai_status": "PENDING",
+      "linked_engine": "NONE",
+      "health": "READY"
+    }
+  ],
+  "global_injection_stats": {
+    "total_sites": 2,
+    "active_ai_nodes": 1
+  }
+}
