@@ -1,0 +1,14 @@
+{
+  "auth_v": "4.1.0-SECURE",
+  "admin_identity": {
+    "id": "A1_COMMANDER",
+    "retina_hash": "e8a9...f4b2",
+    "face_marker_count": 128,
+    "last_access_ip": "127.0.0.1"
+  },
+  "security_protocols": {
+    "onion_layer": 1,
+    "kill_switch_active": true,
+    "failed_attempts_lockout": 3
+  }
+}
