@@ -1,0 +1,13 @@
+{
+  "nexus_version": "2.1.0-ALPHA",
+  "social_integrations": {
+    "WHATSAPP": {"api_status": "CONNECTED", "cloud_sync": "ACTIVE", "apk_status": "UPLOADED"},
+    "FACEBOOK": {"api_status": "EMPTY_SLOT", "cloud_sync": "PENDING", "apk_status": "NOT_FOUND"},
+    "INSTAGRAM": {"api_status": "CONNECTED", "cloud_sync": "ACTIVE", "apk_status": "UPLOADED"},
+    "TRUECALLER": {"api_status": "GHOST_STUB", "cloud_sync": "EMPTY", "apk_status": "NOT_FOUND"}
+  },
+  "terminal_plugins": [
+    {"name": "D_SCANNER", "status": "READY", "path": "plugins/d_scanner.py"},
+    {"name": "NET_SNIFFER", "status": "GHOST_STUB", "path": "plugins/sniffer_stub.py"}
+  ]
+}
