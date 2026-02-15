@@ -1,0 +1,23 @@
+{
+  "system_mode": "HYBRID",
+  "active_brain": "LOCAL_PYTHON",
+  "brains": {
+    "LOCAL_PYTHON": {
+      "type": "FILE_PATH",
+      "path": "./interpreter.py",
+      "status": "ACTIVE"
+    },
+    "CLOUD_OPENAI": {
+      "type": "API_KEY",
+      "key": "sk-xxxx",
+      "url": "https://api.openai.com/v1",
+      "status": "STANDBY"
+    },
+    "LOCAL_HOST_LM": {
+      "type": "LOCAL_URL",
+      "url": "http://localhost:11434",
+      "status": "OFFLINE"
+    }
+  },
+  "hot_swap_enabled": true
+}
