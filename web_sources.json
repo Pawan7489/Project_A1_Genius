@@ -1,0 +1,10 @@
+{
+  "registry_name": "Project A1 Trusted Web Nodes",
+  "nodes": [
+    {"name": "Tech News", "url": "https://techcrunch.com", "priority": "High"},
+    {"name": "GitHub API", "url": "https://api.github.com", "priority": "Critical"},
+    {"name": "ArXiv Papers", "url": "https://arxiv.org", "priority": "Medium"}
+  ],
+  "scraping_interval": "3600s",
+  "auto_summarize": true
+}
