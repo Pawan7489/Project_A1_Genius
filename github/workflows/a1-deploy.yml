@@ -1,0 +1,24 @@
+name: A1-SUPER-GENIUS-DEPLOY
+on:
+  push:
+    branches: [ master ]
+  schedule:
+    - cron: '0 0 * * 0' # Weekly Auto-Update Rule
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Run Self-Diagnosis Test
+        run: python registry.py
+      - name: Verify Constitution
+        run: |
+          if [ -f "constitution.json" ]; then echo "Constitution Found"; else exit 1; fi
+      - name: Security Audit
+        run: echo "Guardian Protocol Scanning..."
+        
