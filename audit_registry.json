@@ -1,0 +1,14 @@
+{
+  "audit_v": "7.3.0-MISSION-CONTROL",
+  "thresholds": {
+    "max_cpu_usage": "90%",
+    "max_gpu_temp": "85°C",
+    "min_ram_mb": 1024
+  },
+  "current_status": {
+    "health_index": "OPTIMAL",
+    "last_check": "2026-02-15 21:35:00",
+    "drive_mesh": "SYNCED"
+  },
+  "solo_mode_active": true
+}
