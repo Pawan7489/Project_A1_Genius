@@ -1,0 +1,12 @@
+{
+  "studio_version": "V1.0-VISION",
+  "default_resolution": "1080p",
+  "fps": 30,
+  "cloud_acceleration": true,
+  "storage_nodes": ["DRIVE_D", "SECURE_CLOUD"],
+  "active_profiles": {
+    "security_sim": "High_Detail",
+    "ui_mockup": "Draft_Quality"
+  },
+  "status": "STUDIO_READY"
+}
