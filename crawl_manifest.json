@@ -1,0 +1,13 @@
+{
+  "crawler_v": "2.4.0-RESEARCH",
+  "allowed_sources": [
+    {"id": "G_SEARCH", "url": "google.com", "type": "GENERAL_KNOWLEDGE"},
+    {"id": "GH_REPOS", "url": "github.com", "type": "CODE_REPOSITORY"},
+    {"id": "KG_SETS", "url": "kaggle.com", "type": "DATA_SCIENCE"}
+  ],
+  "shadowing_config": {
+    "auto_save": true,
+    "max_db_size": "50GB",
+    "relevance_threshold": 0.8
+  }
+}
