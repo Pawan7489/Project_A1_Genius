@@ -1,0 +1,19 @@
+{
+  "time_travel_v": "3.0.0-GOLD",
+  "active_mental_state": "V_1.4.2",
+  "history": [
+    {
+      "id": "V_1.4.1",
+      "performance": "98%",
+      "reasoning_path": "EXTERNAL_API_HYBRID",
+      "status": "ARCHIVED"
+    },
+    {
+      "id": "V_1.4.2",
+      "performance": "99.5%",
+      "reasoning_path": "LOCAL_ENGINE_STRICT",
+      "status": "ACTIVE"
+    }
+  ],
+  "auto_rollback_threshold": "85%"
+}
