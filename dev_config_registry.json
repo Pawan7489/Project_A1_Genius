@@ -1,0 +1,13 @@
+{
+  "dev_v": "7.1.0-ELITE",
+  "panels": {
+    "JS_CONTROL": {"active": true, "theme": "A1-Hacker-Dark", "auto_install_linked": true},
+    "JAVA_CONTROL": {"active": true, "theme": "A1-Hacker-Dark", "auto_install_linked": false}
+  },
+  "vscode_env": {
+    "status": "SYNCED",
+    "install_path": "C:/Program Files/Microsoft VS Code",
+    "last_sync": "2026-02-15 21:30:00"
+  },
+  "guardians": ["STRICT_SANDBOX", "INTERNAL_CRITIQUE"]
+}
