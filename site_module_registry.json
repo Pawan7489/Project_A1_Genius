@@ -1,0 +1,28 @@
+{
+  "registry_v": "6.9.0-DIAMOND",
+  "sites": [
+    {
+      "id": "SITE_A1",
+      "url": "printing_hub.com",
+      "modules": {
+        "NEURAL_CHAT": "ACTIVE",
+        "SEO_OPTIMIZER": "INACTIVE",
+        "IMAGE_GEN": "ACTIVE"
+      },
+      "health": "GREEN"
+    },
+    {
+      "id": "SITE_B2",
+      "url": "ai_services.net",
+      "modules": {
+        "NEURAL_CHAT": "ACTIVE",
+        "SEO_OPTIMIZER": "ACTIVE",
+        "IMAGE_GEN": "GHOST_STUB"
+      },
+      "health": "BLUE"
+    }
+  ],
+  "skeleton_slots": {
+    "video_module": "EMPTY_SLOT"
+  }
+}
