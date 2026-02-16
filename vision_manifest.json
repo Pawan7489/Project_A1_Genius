@@ -1,0 +1,13 @@
+{
+  "vision_v": "8.3.0-EYE-SYNC",
+  "active_model": "CLIP-VIT-B32",
+  "recognition_rules": {
+    "auto_explain": true,
+    "min_confidence": 0.85,
+    "sandbox_processing": true
+  },
+  "skeleton_slots": {
+    "face_recognition_api": "GHOST_STUB",
+    "ocr_engine": "ACTIVE"
+  }
+}
