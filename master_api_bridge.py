@@ -1,58 +1,31 @@
-# PROJECT A1: MASTER API BRIDGE
-# Rule: Use Distributed Execution to link HTML UI with Python Logic. [cite: 2026-02-11]
-
-from fastapi import FastAPI, Request
-from fastapi.middleware.cors import CORSMiddleware
-import uvicorn
-
-app = FastAPI()
-
-# Rule: Security Layer - Only allow local or trusted dashboard access.
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"], # Project A1: Change to specific URL for production
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-@app.post("/api/execute")
-async def handle_request(request: Request):
-    """Rule: Understand Intent over Syntax. [cite: 2026-02-11]"""
-    data = await request.json()
-    intent = data.get("intent")
-    
-    print(f"[BRIDGE] Received Command: {intent}")
-    
-    # Logic: Route to Council of Experts or specific engine
-    # In a real scenario, this calls specific functions from other .py files
-    return {"status": "SUCCESS", "message": f"Intent '{intent}' processed by A1 Core."}
-
-if __name__ == "__main__":
-    # Rule: Musk Rule - Minimalist server launch.
-    uvicorn.run(app, host="127.0.0.1", port=8000)
-
-@app.route('/')
-def home():
-    return render_template('index.html') # Ensure index.html is in 'templates' folder
-
-# PROJECT A1: MASTER API BRIDGE (RENDER VERSION)
-# Rule: Use 0.0.0.0 and Dynamic Port for Global Accessibility.
+# PROJECT A1: MASTER API BRIDGE (UNIVERSAL CONNECTOR)
+# Rule: Automatically detect Backend, Core, and Modules folders.
 
 from flask import Flask, render_template
 import os
+import sys
 
-app = Flask(__name__)
+# 1. Get current path
+base_dir = os.getcwd()
+
+# 2. Add new folders to System Path (Taaki imports fail na hon)
+sys.path.append(os.path.join(base_dir, 'Backend'))
+sys.path.append(os.path.join(base_dir, 'Backend', 'Cloud'))
+sys.path.append(os.path.join(base_dir, 'Backend', 'Engine'))
+sys.path.append(os.path.join(base_dir, 'Backend', 'Logic'))
+sys.path.append(os.path.join(base_dir, 'core'))
+sys.path.append(os.path.join(base_dir, 'modules'))
+
+app = Flask(__name__, template_folder='templates', static_folder='assets')
 
 @app.route('/')
 def home():
-    # Rule: Ensure index.html is inside the 'templates' folder.
+    # Rule: index.html ab 'templates' folder se load hoga
     return render_template('index.html')
 
 if __name__ == "__main__":
-    # Rule: Musk Rule - Minimalist server launch for Render.
-    # Render automatically provides a PORT environment variable.
+    # Render Port Logic
     port = int(os.environ.get("PORT", 8000))
-    
-    # 0.0.0.0 allows external traffic to reach the dashboard.
+    print(f"🚀 Project A1 System Online on Port {port}")
     app.run(host="0.0.0.0", port=port)
     
