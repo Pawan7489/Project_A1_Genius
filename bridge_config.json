@@ -1,0 +1,10 @@
+{
+  "bridge_v": "7.8.0-BRIDGE",
+  "endpoints": [
+    {"path": "/api/execute", "method": "POST", "target": "Intent_Core"},
+    {"path": "/api/sync-cloud", "method": "POST", "target": "Mesh_Engine"},
+    {"path": "/api/rollback", "method": "GET", "target": "Time_Machine"}
+  ],
+  "latency_threshold": "150ms",
+  "pichai_scale_ready": true
+}
