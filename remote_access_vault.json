@@ -1,0 +1,13 @@
+{
+  "portal_v": "8.2.0-REMOTE-MESH",
+  "authorized_devices": [
+    {"device_id": "ADM_MOBILE_01", "name": "Commander's Phone", "status": "ACTIVE"},
+    {"device_id": "ADM_TAB_02", "name": "Tactical Tablet", "status": "GHOST_STUB"}
+  ],
+  "security_protocols": {
+    "encryption": "AES_512_HYPER",
+    "auto_timeout": "300s",
+    "biometric_required": true
+  },
+  "bridge_active": true
+}
