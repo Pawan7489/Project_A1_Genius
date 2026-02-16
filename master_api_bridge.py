@@ -30,9 +30,14 @@ async def handle_request(request: Request):
 if __name__ == "__main__":
     # Rule: Musk Rule - Minimalist server launch.
     uvicorn.run(app, host="127.0.0.1", port=8000)
- 
 
 @app.route('/')
 def home():
     return render_template('index.html') # Ensure index.html is in 'templates' folder
-    
+
+if __name__ == "__main__":
+    # Rule: Musk Rule - Minimalist server launch for Render
+    import os
+    port = int(os.environ.get("PORT", 8000))
+    # Render ke liye 0.0.0.0 aur Dynamic Port zaroori hai
+    app.run(host="0.0.0.0", port=port)
