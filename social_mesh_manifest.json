@@ -1,0 +1,13 @@
+{
+  "mesh_v": "9.4.0-SOCIAL-POWER",
+  "connected_accounts": [
+    {"platform": "FACEBOOK", "status": "ACTIVE", "token": "SLOT_01"},
+    {"platform": "X_TWITTER", "status": "EMPTY_SLOT", "token": ""},
+    {"platform": "INSTAGRAM", "status": "GHOST_STUB", "token": ""}
+  ],
+  "automation_rules": {
+    "auto_hashtag": true,
+    "max_posts_per_day": 5,
+    "pichai_scale_ready": true
+  }
+}
