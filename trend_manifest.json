@@ -1,0 +1,13 @@
+{
+  "harvester_v": "8.4.0-GLOBAL-SENTINEL",
+  "sources": [
+    {"id": "G_NEWS", "name": "Google News", "weight": 1.0, "status": "ACTIVE"},
+    {"id": "X_TRENDS", "name": "X (Twitter) API", "weight": 0.8, "status": "GHOST_STUB"},
+    {"id": "RD_WORLD", "name": "Reddit WorldNews", "weight": 0.7, "status": "ACTIVE"}
+  ],
+  "report_settings": {
+    "auto_generate": true,
+    "time": "06:00 AM",
+    "persona_sync": "SENIOR_EXPERT"
+  }
+}
