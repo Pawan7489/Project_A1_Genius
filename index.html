@@ -11,13 +11,56 @@
 <link rel="manifest" href="/manifest.json">
 <script src="./assets/js/pwa_handler.js"></script>
     
-
+    <link rel="stylesheet" href="assets/css/style.css"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <style>
+        .terminal-output { height: 300px; overflow-y: auto; background: #000; color: #0f0; font-family: monospace; }
+        .glow-node { box-shadow: 0 0 15px #00f3ff; transition: 0.3s; }
+    </style>
+    
 
 
     
 </head>
 
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    
+    
+    
+    
+    <div id="terminal-section">
+        <div id="terminal-output" class="terminal-output p-3"></div>
+        <button onclick="executeNexusScript('JS')">Run JS</button>
+        <button onclick="triggerTimeTravel('V_1.4.1')">Time Travel</button>
+    </div>
+
+    <div id="engine-hub-table" class="mt-4">
+        </div>
+
+    <div id="managed-sites-container">
+        <button onclick="executeOneClickInjection('SITE_A1', 'printing_hub.com')">Inject AI</button>
+    </div>
+
+    <div id="plugin-grid" class="grid grid-cols-3 gap-4">
+        <button onclick="installA1Plugin('D_SCANNER')">Sync Scanner</button>
+        <button onclick="triggerCloudSync('WHATSAPP')">Sync WA Cloud</button>
+    </div>
+
+    <canvas id="logic-canvas-area" style="width: 100%; height: 400px;"></canvas>
+
+    <footer id="mission-control">
+        <div id="audit-scrolling-logs" class="bg-gray-900 p-2 text-xs"></div>
+    </footer>
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     <div class="app-wrapper">
         
@@ -248,6 +291,34 @@
     <script src="./assets/js/terminal_handler.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/adminlte.js"></script>
+
+        
+        
+        
+        <script src="./assets/js/adminlte.js"></script>
+
+
+
+
+
+
+
+
+
+    <script src="assets/js/mirror_hud.js"></script>         <script src="assets/js/live_metrics_hud.js"></script>   <script src="assets/js/web_admin_hud.js"></script>      <script src="assets/js/visual_logic_hud.js"></script>   <script src="assets/js/scripting_hud.js"></script>      <script src="assets/js/global_heatmap_hud.js"></script> <script src="assets/js/council_hud.js"></script>        <script src="assets/js/web_injector_hud.js"></script>   <script src="assets/js/time_travel_hud.js"></script>    <script src="assets/js/biometric_hud.js"></script>      <script src="assets/js/search_hud.js"></script>         <script src="assets/js/threat_map_hud.js"></script>     <script src="assets/js/hot_swap_hud.js"></script>       <script src="assets/js/holographic_hud.js"></script>    <script src="assets/js/security_log_hud.js"></script>   <script src="assets/js/social_nexus_hud.js"></script>   <script src="assets/js/canvas_drag_drop.js"></script>   <script src="assets/js/injection_table_hud.js"></script><script src="assets/js/knowledge_graph_hud.js"></script><script src="assets/js/dev_split_editor_hud.js"></script><script src="assets/js/voice_sidebar_hud.js"></script>   <script src="assets/js/system_audit_hud.js"></script>    <script src="assets/js/plugin_store_hud.js"></script>    <script src="assets/js/constitution_hud.js"></script>    <script src="assets/js/multi_agent_hud.js"></script>     <script src="assets/js/deployment_hud.js"></script>      <script>
+        window.onload = function() {
+            console.log("PROJECT A1: All Systems Online.");
+            window.startDeploymentVisual(); // Trigger Part 77 Animation
+            window.displayCoreStatus();     // Trigger Part 75 Verification
+        };
+    </script>
+</body>
+    
+
+
+
+
+
+
 </body>
 </html>
