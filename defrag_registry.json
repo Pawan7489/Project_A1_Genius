@@ -1,0 +1,13 @@
+{
+  "defrag_v": "9.1.0-SPEED-FUSION",
+  "active_mappings": {
+    "local_root": "C:/Project_A1_Genius",
+    "storage_primary": "D:/A1_Brain",
+    "cloud_nexus": "G_DRIVE_API_LINK"
+  },
+  "optimization_history": [
+    {"date": "2026-02-16", "clusters_fixed": 1402, "speed_gain": "115ms"}
+  ],
+  "auto_defrag": true,
+  "bridge_sync_status": "READY"
+}
