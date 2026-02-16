@@ -1,0 +1,24 @@
+{
+  "voice_v": "8.1.0-VIRTUAL-LUNGS",
+  "personas": {
+    "KID": {
+      "speed": 180,
+      "pitch": 2.0,
+      "label": "Energetic Kid"
+    },
+    "ADULT": {
+      "speed": 150,
+      "pitch": 1.0,
+      "label": "Professional Admin"
+    },
+    "SENIOR": {
+      "speed": 130,
+      "pitch": 0.8,
+      "label": "Senior Architect"
+    }
+  },
+  "api_slots": {
+    "ELEVEN_LABS_KEY": "",
+    "GOOGLE_CLOUD_VOICE": ""
+  }
+}
