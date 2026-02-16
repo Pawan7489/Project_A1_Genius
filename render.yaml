@@ -11,3 +11,4 @@ services:
         sync: false
       - key: RELEVANCE_THRESHOLD
         value: "0.4"
+        
