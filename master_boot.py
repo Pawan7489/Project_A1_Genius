@@ -10,6 +10,17 @@ def start_a1_system():
     print("--- PROJECT A1: INITIALIZING MASTER BOOT ---")
 
 
+
+
+// Example: JS calling Python Backend
+fetch('/api/execute-intent', {
+    method: 'POST',
+    body: JSON.stringify({ command: "Ek naya folder banao" })
+}).then(res => res.json()).then(data => console.log(data));
+
+
+
+
 # master_boot.py ke andar aisi line honi chahiye:
 from flask import Flask
 app = Flask(__name__) # Yeh 'app' variable hi gunicorn ko chahiye
