@@ -1,0 +1,11 @@
+{
+  "vr_v": "9.8.0-SPACE-WALK",
+  "navigation_mode": "VR_3D_EXTENDED",
+  "render_quality": "ULTRA_DYNAMIC",
+  "spatial_settings": {
+    "node_glow": "#00F3FF",
+    "link_opacity": 0.4,
+    "rotation_speed": "0.005rad/s"
+  },
+  "physics_engine": "A1_NEURAL_GRAVITY"
+}
