@@ -1,0 +1,21 @@
+{
+  "sentiment_v": "9.6.0-EMPATHY",
+  "vibe_themes": {
+    "URGENT": {
+      "primary_color": "#FF0000",
+      "voice_speed": 1.4,
+      "ai_persona": "DIRECT_AGENT"
+    },
+    "CALM": {
+      "primary_color": "#00F3FF",
+      "voice_speed": 1.0,
+      "ai_persona": "SUPPORTIVE_PEER"
+    },
+    "FOCUSED": {
+      "primary_color": "#00FF41",
+      "voice_speed": 1.2,
+      "ai_persona": "SENIOR_EXPERT"
+    }
+  },
+  "auto_adapt": true
+}
