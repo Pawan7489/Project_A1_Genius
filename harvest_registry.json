@@ -1,0 +1,11 @@
+{
+  "harvester_v": "8.0.0-MILESTONE",
+  "total_insights_captured": 14205,
+  "learning_priority": ["Quantum_ML", "Onion_Security_V2", "Hinglish_NLP"],
+  "sources_active": {
+    "GitHub": "CONNECTED",
+    "Kaggle": "CONNECTED",
+    "Google_Scholar": "GHOST_STUB"
+  },
+  "last_sprint_completion": "2026-02-16 06:30:00"
+}
