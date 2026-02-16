@@ -1,0 +1,18 @@
+{
+  "seo_v": "8.8.0-BOOSTER-PACK",
+  "global_metrics": {
+    "total_sites": 12,
+    "avg_seo_score": 84,
+    "total_backlinks_tracked": 10500
+  },
+  "sites_config": [
+    {
+      "id": "SITE_A1",
+      "url": "printing_hub.com",
+      "seo_score": 92,
+      "health": "OPTIMAL",
+      "last_boost": "2026-02-16"
+    }
+  ],
+  "auto_fix_active": true
+}
