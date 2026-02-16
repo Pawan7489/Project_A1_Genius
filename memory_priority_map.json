@@ -1,0 +1,14 @@
+{
+  "archiver_v": "8.5.0-SHARP-MIND",
+  "storage_policies": {
+    "vector_db": "HOT",
+    "web_crawls": "COLD_AFTER_30_DAYS",
+    "system_logs": "DELETE_AFTER_7_DAYS",
+    "user_feedback": "HOT"
+  },
+  "relevance_rules": {
+    "last_access_weight": 0.6,
+    "manual_tag_weight": 0.4
+  },
+  "cold_storage_path": "E:/A1_Project/Cold_Vault"
+}
