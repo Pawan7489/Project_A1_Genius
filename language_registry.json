@@ -1,0 +1,14 @@
+{
+  "translator_v": "9.3.0-GLOBE",
+  "active_packs": ["EN", "HI", "ES", "FR", "AR", "ZH"],
+  "skeleton_slots": {
+    "SANSKRIT": "GHOST_STUB",
+    "JAPANESE": "ACTIVE",
+    "BENGALI": "GHOST_STUB"
+  },
+  "settings": {
+    "auto_detect_location": true,
+    "preserve_formatting": true,
+    "pichai_scale_optimized": true
+  }
+}
