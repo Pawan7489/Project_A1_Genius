@@ -1,0 +1,15 @@
+{
+  "architect_v": "8.6.0-BUILDER",
+  "REACT": {
+    "folders": ["src/components", "src/hooks", "public/assets", "tests"],
+    "files": ["src/App.js", "package.json", ".env", "README.md"]
+  },
+  "PYTHON_API": {
+    "folders": ["app/api", "app/core", "app/models", "migrations"],
+    "files": ["main.py", "requirements.txt", "config.py", "Dockerfile"]
+  },
+  "SKELETON_SLOTS": {
+    "JAVA_SPRING": "GHOST_STUB",
+    "FLUTTER_APP": "GHOST_STUB"
+  }
+}
