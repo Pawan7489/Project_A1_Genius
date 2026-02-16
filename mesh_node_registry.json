@@ -1,0 +1,11 @@
+{
+  "mesh_v": "9.7.0-HIVE-MIND",
+  "master_node": "A1_COMMAND_CENTER_RAIPUR",
+  "nodes": [
+    {"id": "NODE_NYC", "type": "DATA_HARVESTER", "status": "ACTIVE"},
+    {"id": "NODE_TOK", "type": "COMPUTE_ENGINE", "status": "STANDBY"},
+    {"id": "NODE_LON", "type": "GHOST_STUB", "status": "OFFLINE"}
+  ],
+  "encryption_protocol": "A1-MESH-V2",
+  "pichai_scale_ready": true
+}
