@@ -35,9 +35,24 @@ if __name__ == "__main__":
 def home():
     return render_template('index.html') # Ensure index.html is in 'templates' folder
 
+# PROJECT A1: MASTER API BRIDGE (RENDER VERSION)
+# Rule: Use 0.0.0.0 and Dynamic Port for Global Accessibility.
+
+from flask import Flask, render_template
+import os
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    # Rule: Ensure index.html is inside the 'templates' folder.
+    return render_template('index.html')
+
 if __name__ == "__main__":
-    # Rule: Musk Rule - Minimalist server launch for Render
-    import os
+    # Rule: Musk Rule - Minimalist server launch for Render.
+    # Render automatically provides a PORT environment variable.
     port = int(os.environ.get("PORT", 8000))
-    # Render ke liye 0.0.0.0 aur Dynamic Port zaroori hai
+    
+    # 0.0.0.0 allows external traffic to reach the dashboard.
     app.run(host="0.0.0.0", port=port)
+    
