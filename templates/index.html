@@ -1,278 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>A1 GENIUS | MASTER CORE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project A1 | Super Genius AI</title>
 
-    <link rel="stylesheet" href="./assets/css/adminlte.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
-
-<link rel="manifest" href="/manifest.json">
-<script src="./assets/js/pwa_handler.js"></script>
-    
-    <link rel="stylesheet" href="assets/css/style.css"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    
-    <style>
-        .terminal-output { height: 300px; overflow-y: auto; background: #000; color: #0f0; font-family: monospace; }
-        .glow-node { box-shadow: 0 0 15px #00f3ff; transition: 0.3s; }
-    </style>
-    
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project A1 | Super Genius Dashboard</title>
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/adminlte.css') }}">
-</head>
-    
-
-    
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/adminlte.css') }}">
+  
+  <style>
+    /* Custom Futuristic Tweaks */
+    .terminal-window {
+        background-color: #000;
+        color: #0f0;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 15px;
+        border: 1px solid #333;
+        height: 300px;
+        overflow-y: auto;
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    }
+    .status-badge {
+        font-size: 0.9em;
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin-right: 5px;
+    }
+  </style>
 </head>
 
-<body class="layout-fixed sidebar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-    
-    
-    
-    
-    <div id="terminal-section">
-        <div id="terminal-output" class="terminal-output p-3"></div>
-        <button onclick="executeNexusScript('JS')">Run JS</button>
-        <button onclick="triggerTimeTravel('V_1.4.1')">Time Travel</button>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  <nav class="main-header navbar navbar-expand navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Project A1: Online</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-signal text-success"></i> Signal: Strong
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="#" class="brand-link">
+      <span class="brand-text font-weight-light pl-3">SUPER GENIUS AI</span>
+    </a>
+
+    <div class="sidebar">
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+          
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>Dashboard Command</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-brain"></i>
+              <p>Neural Engine</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-shield-alt"></i>
+              <p>Security Shield</p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-globe"></i>
+              <p>Web Automation</p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="content-wrapper">
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Mission Control</h1>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="engine-hub-table" class="mt-4">
+    <section class="content">
+      <div class="container-fluid">
+        
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-microchip"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">CPU Load</span>
+                <span class="info-box-number">Stable</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-temperature-high"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">GPU Temp</span>
+                <span class="info-box-number">42°C</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-    <div id="managed-sites-container">
-        <button onclick="executeOneClickInjection('SITE_A1', 'printing_hub.com')">Inject AI</button>
-    </div>
-
-    <div id="plugin-grid" class="grid grid-cols-3 gap-4">
-        <button onclick="installA1Plugin('D_SCANNER')">Sync Scanner</button>
-        <button onclick="triggerCloudSync('WHATSAPP')">Sync WA Cloud</button>
-    </div>
-
-    <canvas id="logic-canvas-area" style="width: 100%; height: 400px;"></canvas>
-
-    <footer id="mission-control">
-        <div id="audit-scrolling-logs" class="bg-gray-900 p-2 text-xs"></div>
-    </footer>
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="app-wrapper">
-        
-        <nav class="app-header navbar navbar-expand bg-body border-bottom border-secondary">
-            <div class="container-fluid">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
-                            <i class="bi bi-list"></i>
-                        </a>
-                    </li>
-                </ul>
-
-                <div class="mx-auto d-none d-md-flex align-items-center gap-4">
-                    <div class="text-secondary small"><i class="bi bi-cpu text-success"></i> AI CORE: <span class="text-white fw-bold">ONLINE</span></div>
-                    <div class="text-secondary small"><i class="bi bi-shield-lock text-info"></i> CONSTITUTION: <span class="text-white fw-bold">ENFORCED</span></div>
-                    <div class="text-secondary small"><i class="bi bi-hdd-stack text-warning"></i> REGISTRY: <span class="text-white fw-bold">14 ACTIVE</span></div>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">Live Neural Terminal</h3>
+              </div>
+              <div class="card-body p-0">
+                <div class="terminal-window" id="terminal-output">
+                    > [BOOT] Loading Core Constitution... LOCKED<br>
+                    > [SYSTEM] Scanning Registry.py... ACTIVE<br>
+                    > [DEPLOY] Mesh_Bridge_Active... COMPLETED [100%]<br>
+                    > [READY] Waiting for Commander input...<br>
+                    <span id="typing-cursor">_</span>
                 </div>
-
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <button class="btn btn-sm btn-kill-protocol" title="Ctrl+Alt+K for Emergency">
-                            <i class="bi bi-power"></i> KILL SWITCH
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <aside class="app-sidebar shadow">
-            <div class="sidebar-brand">
-                <a href="#" class="brand-link">
-                    <span class="brand-text fw-bold text-danger">A1</span> 
-                    <span class="fw-light">SUPER GENIUS</span>
-                </a>
-            </div>
-            
-            <div class="sidebar-wrapper">
-                <nav class="mt-2">
-                    <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu">
-                        <li class="nav-header text-secondary">MAIN TERMINAL</li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active">
-                                <i class="nav-icon bi bi-speedometer2"></i>
-                                <p>Operational Overview</p>
-                            </a>
-                        </li>
-                        
-                        <li class="nav-header text-secondary">AI MODULES</li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-diagram-3-fill text-success"></i>
-                                <p>Distributed Mesh</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-journal-check text-info"></i>
-                                <p>Constitution Logs</p>
-                            </a>
-                        </li>
-
-
-                        <li class="nav-item">
-    <a href="#" class="nav-link">
-        <i class="nav-icon bi bi-cloud-arrow-up text-info"></i>
-        <p>Cloud Node: <span id="cloud-node-status" class="badge bg-info">SCANNING</span></p>
-    </a>
-                        </li>
-                        
-<li class="nav-item">
-    <span id="ai-mood-indicator" class="badge bg-success ms-3" style="font-size: 0.7rem;">AI_MOOD: STABLE</span>
-</li>
-              <li class="nav-item">
-    <span class="badge bg-outline-success border border-success text-success p-1" style="font-size: 0.65rem;">HARDENED_V2.0</span>
-              </li>
-                  <li class="nav-item">
-    <a href="#" class="nav-link">
-        <i class="nav-icon bi bi-grid-3x3-gap text-warning"></i>
-        <p>Plugin Hub <span class="badge bg-warning text-dark">NEW</span></p>
-    </a>
-                  </li>
-                        
-
-<li class="nav-item dropdown">
-    <a class="nav-link" data-bs-toggle="dropdown" href="#">
-        <span id="active-brain-tag" class="badge bg-primary">ENGINE: LOADING...</span>
-    </a>
-    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end bg-dark">
-        <button class="dropdown-item text-white" onclick="swapBrain('OPENAI')">GPT-4 Turbo</button>
-        <button class="dropdown-item text-white" onclick="swapBrain('GEMINI')">Gemini 1.5 Pro</button>
-        <button class="dropdown-item text-white" onclick="swapBrain('CLAUDE')">Claude 3 Opus</button>
-    </div>
-</li>
-                        
-<li class="nav-item">
-    <a class="nav-link" href="#"><i class="bi bi-shield-check text-success" id="shield-status"></i></a>
-</li>
-                        
-
-                        
-
-                        
-                        <li class="nav-header text-secondary">SYSTEM</li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" onclick="runSelfDiagnosis()">
-                                <i class="nav-icon bi bi-activity text-warning"></i>
-                                <p>Self-Diagnosis</p>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </aside>
-
-        <main class="app-main">
-            <div class="app-content-header">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-sm-6">
-                            <h3 class="mb-0">System Dashboard <span class="badge bg-success ms-2" style="font-size: 10px;">v1.0-GENIUS</span></h3>
-                        </div>
-                    </div>
+              </div>
+              <div class="card-footer clearfix">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Type command (e.g., 'Ek naya folder banao')...">
+                    <span class="input-group-append">
+                      <button type="button" class="btn btn-info btn-flat">Execute</button>
+                    </span>
                 </div>
+              </div>
             </div>
+          </div>
 
-            <div class="app-content">
-                <div class="container-fluid">
-                    
-                    <div class="row">
-                        <div class="col-lg-3 col-6">
-                            <div class="card p-3 mb-4">
-                                <div class="text-secondary small">GPU TEMP</div>
-                                <div class="h4 mb-0 fw-bold">42°C</div>
-                                <div class="progress mt-2" style="height: 4px;">
-                                    <div class="progress-bar bg-success" style="width: 42%"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="card p-3 mb-4">
-                                <div class="text-secondary small">NEURAL LOAD</div>
-                                <div class="h4 mb-0 fw-bold">12.5%</div>
-                                <div class="progress mt-2" style="height: 4px;">
-                                    <div class="progress-bar bg-info" style="width: 12%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div id="voice-wave-container" style="display:none; padding: 10px; background: rgba(0, 255, 65, 0.05); border-bottom: 1px solid #1a1a1a;"></div>
-                    
-
-
-
-                    
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header border-bottom border-secondary d-flex justify-content-between align-items-center">
-                                    <h5 class="card-title text-success m-0"><i class="bi bi-terminal"></i> COMMAND INTERFACE</h5>
-                                    <div>
-                                        <span class="badge border border-success text-success">SECURE LINK</span>
-                                    </div>
-                                </div>
-                                <div class="card-body bg-black p-0" style="height: 350px;">
-                                    <div class="terminal-output p-3 h-100 overflow-auto">
-                                        </div>
-                                </div>
-                                <div class="card-footer bg-dark border-top border-secondary">
-                                    <div class="input-group">
-                                        <span class="input-group-text bg-transparent border-0 text-success fw-bold">A1@Genius:~$</span>
-                                        <input type="text" class="form-control bg-transparent border-0 text-white" placeholder="Enter command (e.g., 'Ek naya folder banao')...">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                        <div id="voice-wave-container" style="display:none; padding: 10px; background: rgba(0, 255, 65, 0.05); border-bottom: 1px solid #1a1a1a;"></div>
-
-
-
-
-
-
-                    
-                    <div class="row mt-4">
-                        <div class="col-12 text-center">
-                            <p class="text-secondary small mb-2">How is the AI performing?</p>
-                            <button class="btn btn-outline-success btn-sm me-2" onclick="submitFeedback('up')"><i class="bi bi-hand-thumbs-up"></i> Good Job</button>
-                            <button class="btn btn-outline-danger btn-sm" onclick="submitFeedback('down')"><i class="bi bi-hand-thumbs-down"></i> Bad</button>
-                        </div>
-                    </div>
-
+          <div class="col-md-4">
+             <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">System Health</h3>
                 </div>
-            </div>
-        </main>
+                <div class="card-body">
+                    <p><i class="fas fa-check-circle text-success"></i> Internet: Connected</p>
+                    <p><i class="fas fa-database text-primary"></i> Drive D: Linked</p>
+                    <p><i class="fas fa-cloud text-info"></i> Cloud: Active</p>
+                    <hr>
+                    <button class="btn btn-danger btn-block"><b><i class="fas fa-power-off"></i> KILL SWITCH</b></button>
+                </div>
+             </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <footer class="main-footer">
+    <strong>Project A1 Super Genius &copy; 2026</strong>
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.0.0
     </div>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/adminlte.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/god_mode_hud.js') }}"></script>
 
 
 <script src="./assets/js/repair_hud.js"></script>
@@ -315,24 +231,6 @@
 <script src="{{ url_for('static', filename='js/god_mode_hud.js') }}"></script>
 
 
-
-
-
-
-    <script src="assets/js/mirror_hud.js"></script>         <script src="assets/js/live_metrics_hud.js"></script>   <script src="assets/js/web_admin_hud.js"></script>      <script src="assets/js/visual_logic_hud.js"></script>   <script src="assets/js/scripting_hud.js"></script>      <script src="assets/js/global_heatmap_hud.js"></script> <script src="assets/js/council_hud.js"></script>        <script src="assets/js/web_injector_hud.js"></script>   <script src="assets/js/time_travel_hud.js"></script>    <script src="assets/js/biometric_hud.js"></script>      <script src="assets/js/search_hud.js"></script>         <script src="assets/js/threat_map_hud.js"></script>     <script src="assets/js/hot_swap_hud.js"></script>       <script src="assets/js/holographic_hud.js"></script>    <script src="assets/js/security_log_hud.js"></script>   <script src="assets/js/social_nexus_hud.js"></script>   <script src="assets/js/canvas_drag_drop.js"></script>   <script src="assets/js/injection_table_hud.js"></script><script src="assets/js/knowledge_graph_hud.js"></script><script src="assets/js/dev_split_editor_hud.js"></script><script src="assets/js/voice_sidebar_hud.js"></script>   <script src="assets/js/system_audit_hud.js"></script>    <script src="assets/js/plugin_store_hud.js"></script>    <script src="assets/js/constitution_hud.js"></script>    <script src="assets/js/multi_agent_hud.js"></script>     <script src="assets/js/deployment_hud.js"></script>      <script>
-        window.onload = function() {
-            console.log("PROJECT A1: All Systems Online.");
-            window.startDeploymentVisual(); // Trigger Part 77 Animation
-            window.displayCoreStatus();     // Trigger Part 75 Verification
-        };
-    </script>
-</body>
     
-
-
-
-
-
-
 </body>
 </html>
