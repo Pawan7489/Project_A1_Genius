@@ -1,12 +1,13 @@
 services:
   - type: web
-    name: project-a1-genius
+    name: project-a1-core
     env: python
     buildCommand: pip install -r requirements.txt
-    # FIX: Gunicorn ko Python module (master_boot) aur Flask app (app) chahiye
-    startCommand: gunicorn master_boot:app
+    startCommand: gunicorn master_api_bridge:app
     envVars:
-      - key: RENDER
-        value: true
-      - key: PYTHON_VERSION
-        value: 3.10.0
+      - key: MASTER_KEY
+        sync: false
+      - key: CLOUD_BOX_URL
+        sync: false
+      - key: RELEVANCE_THRESHOLD
+        value: "0.4"
