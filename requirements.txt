@@ -1,8 +1,7 @@
 flask
-telethon
-numpy
-requests
-psutil
-beautifulsoup4
+flask-cors
 gunicorn
-# Hardware libs removed for Cloud Build stability
+python-dotenv
+requests
+pyttsx3
+# Baaki modules jo Part 1-100 mein use hue hain
