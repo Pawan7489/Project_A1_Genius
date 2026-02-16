@@ -1,0 +1,14 @@
+{
+  "mesh_v": "9.4.0-SOCIAL-FUSION",
+  "nodes": {
+    "FACEBOOK": {"id": "FB_01", "status": "ACTIVE", "bridge": "STABLE"},
+    "X_TWITTER": {"id": "X_02", "status": "GHOST_STUB", "bridge": "EMPTY_SLOT"},
+    "INSTAGRAM": {"id": "IG_03", "status": "ACTIVE", "bridge": "STABLE"}
+  },
+  "automation_rules": {
+    "auto_hashtag_gen": true,
+    "max_posts_per_day": 5,
+    "human_in_the_loop_audit": true
+  },
+  "pichai_scale_ready": true
+}
