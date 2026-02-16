@@ -1,0 +1,11 @@
+{
+  "sentinel_v": "7.9.0-SENTINEL",
+  "admin_profile": {
+    "nodal_points": 128,
+    "retina_depth": "4D_MAPPED",
+    "encryption": "AES_256_A1",
+    "kill_switch_link": "ENABLED"
+  },
+  "lockdown_status": "NORMAL",
+  "failsafe_active": true
+}
