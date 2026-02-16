@@ -1,0 +1,15 @@
+{
+  "installer_v": "7.7.0-PLATINUM",
+  "required_parts": 77,
+  "drive_mapping": {
+    "primary": "C:/Project_A1_Genius",
+    "storage_d": "D:/A1_Brain_Storage",
+    "storage_e": "E:/A1_Backups"
+  },
+  "critical_files": [
+    "constitution.json",
+    "registry.py",
+    "master_boot.py"
+  ],
+  "auto_update": true
+}
