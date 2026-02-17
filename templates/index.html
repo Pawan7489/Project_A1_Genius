@@ -262,5 +262,70 @@
   });
 </script>
 
+
+
+  
+
+<script>
+  $(document).ready(function() {
+      console.log("🚀 Terminal Link Established");
+
+      const inputField = document.getElementById('command-input');
+      const execBtn = document.getElementById('execute-btn');
+      const termOutput = document.getElementById('terminal-output');
+
+      // Function to add text to screen
+      function addToScreen(text, color='#0f0') {
+          const newLine = document.createElement('div');
+          newLine.style.color = color;
+          newLine.style.fontFamily = "'Courier New', monospace";
+          newLine.style.marginBottom = "5px";
+          newLine.innerHTML = text;
+          termOutput.appendChild(newLine);
+          termOutput.scrollTop = termOutput.scrollHeight; // Auto-scroll
+      }
+
+      // CORE FUNCTION: Send to Python
+      async function executeCommand() {
+          const cmd = inputField.value.trim();
+          if(cmd === "") return;
+
+          // 1. Show User Command immediately
+          addToScreen(`root@A1:~$ ${cmd}`, '#fff');
+          inputField.value = ""; // Clear Input
+
+          // 2. Show Loading
+          addToScreen(`> Transmitting to Core...`, '#ffc107');
+
+          try {
+              // 3. ASLI SERVER CALL (Fetch)
+              const response = await fetch('/api/terminal', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ command: cmd })
+              });
+
+              const data = await response.json();
+
+              // 4. Show Real Result
+              addToScreen(`> ${data.response}`, '#00d2ff'); // Blue Text for AI
+
+          } catch (error) {
+              addToScreen(`[ERROR] Connection Lost: ${error}`, 'red');
+          }
+      }
+
+      // Event Listeners (Click & Enter Key)
+      if(execBtn) execBtn.addEventListener('click', executeCommand);
+      if(inputField) {
+          inputField.addEventListener('keypress', function (e) {
+              if (e.key === 'Enter') executeCommand();
+          });
+      }
+      
+      // Initial Message
+      addToScreen("> [SYSTEM] TERMINAL LINK: ONLINE", "#28a745");
+  });
+</script>
 </body>
 </html>
