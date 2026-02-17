@@ -8,6 +8,11 @@ class MasterRegistry:
 
     def scan_resources(self):
         print("[SYSTEM] Scanning Neural Mesh...")
+
+
+# Is line ko check karein aur update karein
+app = Flask(__name__, static_folder='Static', static_url_path='/Static')
+
         
         # Check for Distributed Drives
         paths_to_check = ["D:/", "E:/", "./assets/modules"]
