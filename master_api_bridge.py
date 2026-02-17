@@ -16,7 +16,8 @@ sys.path.append(os.path.join(base_dir, 'Backend', 'Logic'))
 sys.path.append(os.path.join(base_dir, 'core'))
 sys.path.append(os.path.join(base_dir, 'modules'))
 
-app = Flask(__name__, template_folder='templates', static_folder='assets')
+# Rule: Flask defaults to 'static' folder, so we simplify.
+app = Flask(__name__, template_folder='templates', static_folder='static')
 
 @app.route('/')
 def home():
