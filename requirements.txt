@@ -1,9 +1,5 @@
 Flask
 gunicorn
-flask
 flask-cors
-gunicorn
 python-dotenv
 requests
-pyttsx3
-# Baaki modules jo Part 1-100 mein use hue hain
