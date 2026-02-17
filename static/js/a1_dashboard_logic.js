@@ -1,27 +1,35 @@
-// A1 Super Genius - Core Interface Logic
+// PROJECT A1: MASTER CLICK HANDLER
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("A1 Intelligence System: Menu Logic Activated.");
+    console.log("A1 Intelligence: System Online. Monitoring Menu Clicks...");
 
-    // Sabhi buttons aur menu links ko select karein
-    const menuLinks = document.querySelectorAll('.nav-link, .menu-item, button');
+    // Universal Click Listener
+    document.addEventListener('click', function(event) {
+        // Sirf Link ya Button par click check karein
+        const clickedElement = event.target.closest('a, .nav-link, li');
+        
+        if (clickedElement) {
+            const menuText = clickedElement.innerText.trim();
+            console.log("User Intention Detected:", menuText);
 
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            let text = this.innerText.toLowerCase().trim();
-            console.log("Detecting Click on:", text);
-
-            // Website Security aur baaki modules ke liye logic
-            if (text.includes("security") || text.includes("website security")) {
-                e.preventDefault();
-                openSecurityModule();
+            // Intent over Syntax logic [cite: 2026-02-11]
+            if (menuText.includes("Security Shield")) {
+                event.preventDefault();
+                loadA1Module("Security");
+            } 
+            else if (menuText.includes("Neural Engine")) {
+                event.preventDefault();
+                loadA1Module("Neural");
             }
-            // Is tarah baaki menus ke liye bhi logic add karein
-        });
+            else if (menuText.includes("Web Automation")) {
+                event.preventDefault();
+                loadA1Module("Automation");
+            }
+        }
     });
 });
 
-function openSecurityModule() {
-    // Yahan wo URL ya Div load hoga jo Website Security ke liye hai
-    alert("Website Security Module Loading...");
-    // window.location.href = "/security-panel"; // Agar alag page hai toh
+function loadA1Module(moduleName) {
+    // Ye check karne ke liye ki kya module active hai (Master Blueprint Registry) [cite: 2026-02-11]
+    alert("Project A1: Initializing " + moduleName + " Module...");
+    // Yahan aap apna page content badal sakte hain
 }
