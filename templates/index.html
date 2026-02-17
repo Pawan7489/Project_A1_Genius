@@ -10,7 +10,6 @@
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
 
-  
   <style>
     /* Terminal Effect */
     .terminal-window {
@@ -19,11 +18,23 @@
         font-family: 'Courier New', monospace;
         padding: 15px;
         border: 1px solid #333;
+        height: 300px; /* Fixed Height */
+        overflow-y: auto; /* Scrollable */
         box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+    }
+    /* Scrollbar Styling for Hacker Feel */
+    .terminal-window::-webkit-scrollbar {
+        width: 8px;
+    }
+    .terminal-window::-webkit-scrollbar-thumb {
+        background: #333; 
+        border-radius: 4px;
+    }
+    .terminal-window::-webkit-scrollbar-thumb:hover {
+        background: #555; 
     }
   </style>
 </head>
-
 
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -136,14 +147,13 @@
                     > [SYSTEM] Scanning Registry.py... ACTIVE<br>
                     > [DEPLOY] Mesh_Bridge_Active... COMPLETED [100%]<br>
                     > [READY] Waiting for Commander input...<br>
-                    <span id="typing-cursor">_</span>
                 </div>
               </div>
               <div class="card-footer clearfix">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Type command (e.g., 'Ek naya folder banao')...">
+                    <input type="text" id="command-input" class="form-control" placeholder="Type command (e.g., 'Ek naya folder banao')...">
                     <span class="input-group-append">
-                      <button type="button" class="btn btn-info btn-flat">Execute</button>
+                      <button type="button" id="execute-btn" class="btn btn-info btn-flat">Execute</button>
                     </span>
                 </div>
               </div>
@@ -179,53 +189,78 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
-<script src="{{ url_for('static', filename='js/adminlte.js') }}"></script>
 
-<script src="{{ url_for('static', filename='js/god_mode_hud.js') }}"></script>
-
-
-<script src="./static/js/repair_hud.js"></script>
-    
-    <script src="./static/js/onion_visualizer.js"></script>
-    <script src="./static/js/reasoning_hud.js"></script>
-    <script src="./static/js/mesh_visualizer.js"></script>
-    <script src="./static/js/multimodal_hud.js"></script>
-    <script src="./static/js/sandbox_hud.js"></script>
-<script src="./static/js/stress_visualizer.js"></script>
-    
-    <script src="./static/js/cloud_hud.js"></script>
-    
-<script src="./static/js/expert_ui.js"></script>
-    <script src="./static/js/rlhf_handler.js"></script>
-    <script src="./static/js/bridge_ui.js"></script>
-    <script src="./static/js/mesh_status.js"></script>
-    
-    <script src="./static/js/memory_monitor.js"></script>
-    <script src="./static/js/personality_hud.js"></script>
-    
-<script src="./static/js/solo_mode.js"></script>
-    
-<script src="./static/js/diagnosis.js"></script>
-    
-    <script src="./static/js/terminal_handler.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-        
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
 
-        
-      
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
-
-<script src="{{ url_for('static', filename='js/adminlte.js') }}"></script>
 <script src="{{ url_for('static', filename='js/god_mode_hud.js') }}"></script>
+<script src="{{ url_for('static', filename='js/repair_hud.js') }}"></script>
+<script src="{{ url_for('static', filename='js/onion_visualizer.js') }}"></script>
+<script src="{{ url_for('static', filename='js/reasoning_hud.js') }}"></script>
+<script src="{{ url_for('static', filename='js/mesh_visualizer.js') }}"></script>
+<script src="{{ url_for('static', filename='js/multimodal_hud.js') }}"></script>
+<script src="{{ url_for('static', filename='js/sandbox_hud.js') }}"></script>
+<script src="{{ url_for('static', filename='js/stress_visualizer.js') }}"></script>
+<script src="{{ url_for('static', filename='js/cloud_hud.js') }}"></script>
+<script src="{{ url_for('static', filename='js/expert_ui.js') }}"></script>
+<script src="{{ url_for('static', filename='js/rlhf_handler.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bridge_ui.js') }}"></script>
+<script src="{{ url_for('static', filename='js/mesh_status.js') }}"></script>
+<script src="{{ url_for('static', filename='js/memory_monitor.js') }}"></script>
+<script src="{{ url_for('static', filename='js/personality_hud.js') }}"></script>
+<script src="{{ url_for('static', filename='js/solo_mode.js') }}"></script>
+<script src="{{ url_for('static', filename='js/diagnosis.js') }}"></script>
+<script src="{{ url_for('static', filename='js/terminal_handler.js') }}"></script>
 
+<script>
+  // Yeh script ensure karega ki agar external files fail ho jayein,
+  // tab bhi Terminal aur Buttons kaam karein.
+  $(document).ready(function() {
+      console.log("🚀 Project A1 System Initialized");
 
-    
+      // Terminal Logic Connectors
+      const inputField = document.getElementById('command-input');
+      const execBtn = document.getElementById('execute-btn');
+      const termOutput = document.getElementById('terminal-output');
+
+      function executeCommand() {
+          const cmd = inputField.value.trim();
+          if(cmd === "") return;
+
+          // Add User Command to Screen
+          termOutput.innerHTML += `<div><span style="color:white;">commander@A1:~$</span> ${cmd}</div>`;
+          inputField.value = ""; // Clear Input
+
+          // Simulate Processing
+          termOutput.innerHTML += `<div style="color:yellow;">> Processing intent...</div>`;
+          
+          // Auto Scroll to Bottom
+          termOutput.scrollTop = termOutput.scrollHeight;
+
+          // Simple AI Response (Real logic Backend se aayega)
+          setTimeout(() => {
+              termOutput.innerHTML += `<div style="color:#0f0;">> Command Received. Executing protocol...</div>`;
+              termOutput.scrollTop = termOutput.scrollHeight;
+          }, 800);
+      }
+
+      // Button Click
+      if(execBtn) {
+          execBtn.addEventListener('click', executeCommand);
+      }
+
+      // Enter Key Press
+      if(inputField) {
+          inputField.addEventListener('keypress', function (e) {
+              if (e.key === 'Enter') {
+                  executeCommand();
+              }
+          });
+      }
+  });
+</script>
+
 </body>
 </html>
