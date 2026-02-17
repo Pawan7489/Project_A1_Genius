@@ -1,5 +1,6 @@
-Flask
-gunicorn
+Flask==3.0.0
+gunicorn==21.2.0
 flask-cors
 python-dotenv
 requests
+# pyttsx3 hata diya gaya hai kyunki wo server crash kar raha tha
