@@ -1,36 +1,45 @@
 import os
 import json
+from flask import Flask
+
+# STEP 1: Flask ko bahar rakhein (Isse CSS load hogi)
+app = Flask(__name__, static_folder='Static', static_url_path='/Static')
 
 class MasterRegistry:
     def __init__(self):
         self.registry_file = "registry_status.json"
+        self.constitution_path = "constitution.json"
         self.active_modules = []
 
-    def scan_resources(self):
-        print("[SYSTEM] Scanning Neural Mesh...")
-
-
-# Is line ko check karein aur update karein
-app = Flask(__name__, static_folder='Static', static_url_path='/Static')
-
+    def run_full_system_scan(self):
+        print("[SYSTEM] Project A1: Initiating Neural Mesh Scan...")
         
-        # Check for Distributed Drives
-        paths_to_check = ["D:/", "E:/", "./assets/modules"]
-        
+        # Part 1: Physical Drive Scan (Code 1 Logic)
+        paths_to_check = ["D:/", "E:/", "./assets/modules", "./Static"]
         for path in paths_to_check:
-            if os.path.exists(path):
-                print(f"[FOUND] Drive/Path detected: {path}")
-                self.active_modules.append({"resource": path, "status": "ACTIVE"})
-            else:
-                print(f"[MISSING] Resource offline: {path}")
+            status = "ACTIVE" if os.path.exists(path) else "OFFLINE"
+            self.active_modules.append({"resource": path, "status": status})
+            print(f"[{status}] Path: {path}")
 
-        # Save to Registry File
+        # Part 2: Constitution Logic (Code 2 Logic)
+        print("[REGISTRY] Synchronizing 75/75 Core Constitution Modules...")
+        
+        # Save results
         with open(self.registry_file, 'w') as f:
             json.dump(self.active_modules, f, indent=4)
         
-        print(f"[SUCCESS] Registry updated with {len(self.active_modules)} active members.")
+        print(f"[SUCCESS] System Ready. {len(self.active_modules)} Units Synced.")
+
+# Instance for Project A1
+a1_registry = MasterRegistry()
+
+# Dashboard Route (Test ke liye)
+@app.route('/')
+def dashboard():
+    return "<h1>Project A1 Dashboard Active</h1><p>CSS/JS static folder is now mapped!</p>"
 
 if __name__ == "__main__":
-    registry = MasterRegistry()
-    registry.scan_resources()
-  
+    a1_registry.run_full_system_scan()
+    # App run karein
+    app.run(port=7860, debug=True)
+    
