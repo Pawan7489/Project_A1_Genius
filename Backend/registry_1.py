@@ -12,6 +12,13 @@ class MasterRegistry:
     def run_startup_scan(self):
         """Rule: Register only the active members. [cite: 2026-02-11]"""
         print("[REGISTRY] Scanning All Units (Drives D/E, Cloud, APIs)...")
+      
+        
+        # Is line ko check karein aur update karein
+app = Flask(__name__, static_folder='Static', static_url_path='/Static')
+
+        
+        
         # Logic: Locate and link scattered files via Bridge Script [cite: 2026-02-11]
         for part in range(1, 76):
             # Simulation: Check if module exists
