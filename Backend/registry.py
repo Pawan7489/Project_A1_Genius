@@ -2,8 +2,10 @@ import os
 import json
 from flask import Flask
 
-# STEP 1: Flask ko bahar rakhein (Isse CSS load hogi)
-app = Flask(__name__, static_folder='Static', static_url_path='/Static')
+# registry.py mein hamesha ye format rakhein
+app = Flask(__name__, 
+            static_folder='Static',    # Check: Kya folder ka 'S' capital hai?
+            static_url_path='/Static') # Browser mein link karne ke liye
 
 class MasterRegistry:
     def __init__(self):
